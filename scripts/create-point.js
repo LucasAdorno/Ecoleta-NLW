@@ -19,16 +19,19 @@ populateUFs();
 function getCities(event){ 
     const eventValue =event.target.value;  
     const citySelect = document.querySelector("select[name=city]");
-    const stateInput = document.querySelector("select[name=state]");
+    const stateInput = document.querySelector("input[name=state]");
     citySelect.innerHTML = `<option value="">Selecione a cidade</option>`;
+    citySelect.setAttribute('disabled', 'disabled')
     const ufValue = event.target.value
+    const indexOfSelectedState = event.target.selectedIndex
+    stateInput.value = event.target.options[indexOfSelectedState].text
     const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios `
 
     fetch(url)
     .then( res => res.json() )
     .then( cities => {
         for(city of cities){
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`;
         }
         if (eventValue == 'disabled') {
             citySelect.setAttribute('disabled', 'disabled')
@@ -37,4 +40,18 @@ function getCities(event){
          citySelect.disabled = false;}
     } )
 
+}
+
+// Itens de Coleta
+
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+console.log(itemsToCollect)
+for(item of itemsToCollect){
+    item.addEventListener("click", handleSelectedItem)
+}
+
+function handleSelectedItem(event){
+    const itemLi = event.target
+    const itemId = itemLi.dataset.id
+    itemLi.classList.toggle("selected")
 }
