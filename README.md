@@ -5,4 +5,4 @@
 </br>
 <h3>Através do Ecoleta você pode cadastrar ou pesquisar os lugares para descarte sustentável.</h3>
 </br>
-![Sceenshot](images/Ecoleta-cadastro.png)
+![Screenshot](images/Ecoleta-cadastro.png)
