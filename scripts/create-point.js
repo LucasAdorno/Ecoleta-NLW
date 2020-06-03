@@ -30,7 +30,7 @@ function getCities(event){
         for(city of cities){
             citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`;
         }
-        if (eventValue == 1234) {
+        if (eventValue == 'disabled') {
             citySelect.setAttribute('disabled', 'disabled')
         }
         else{
