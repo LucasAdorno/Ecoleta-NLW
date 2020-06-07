@@ -5,9 +5,24 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "nunjucks": "^3.2.1"
+    "nunjucks": "^3.2.1",
+    "sqlite3": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "description": "![Screenshot](images/Ecoleta.png) <br/> ### Através do Ecoleta você pode cadastrar lugares para descarte sustentável. ![myimage-alt-tag](images/Tela-cadastro.png) ### E encontrar os lugares cadastrados de acordo com a sua cidade. ![myimage-alt-tag](images/Resultados-layout.png)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasAdorno/Ecoleta-NLW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasAdorno/Ecoleta-NLW/issues"
+  },
+  "homepage": "https://github.com/LucasAdorno/Ecoleta-NLW#readme"
 }
