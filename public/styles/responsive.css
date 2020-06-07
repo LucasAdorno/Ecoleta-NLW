@@ -80,13 +80,15 @@
     #page-home{
         background-position-y: 15vh;
     }
+}
+ @media(max-width: 950px){
     #page-search-results .cards{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
     }
 }
 
-@media(max-width: 760px){
+@media(max-width: 730px){
     #page-search-results .cards{
         grid-template-columns: 1fr;
 
