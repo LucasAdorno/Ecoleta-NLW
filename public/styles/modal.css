@@ -7,7 +7,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 400ms;
 }
 
 #modal.hide{
@@ -71,4 +70,22 @@
 
 #modal form button:hover{
     background-color: #28a161;
+}
+
+
+@media(max-width: 524px){
+    #modal form button{
+        width:80px;
+        height:60px;
+    }
+    #modal .content{
+        width: 250px;
+    }
+    #modal .header h1{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    #modal form input{
+        padding: 8px 12px;
+    }
 }

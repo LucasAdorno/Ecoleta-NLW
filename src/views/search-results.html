@@ -1,55 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Resultado da pesquisa</title>
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link rel="stylesheet" type="text/css" href="styles/search-results.css">
+{% extends "layout.html" %}
 
-  <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+{% set pageId = "page-search-results" %}
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Ubuntu:wght@700&display=swap" rel="stylesheet"> 
-</head>
-<body>
-  <div id="page-search-results">
+{% block title %}
+    <title>Resultado da pesquisa</title>
+{% endblock title %}
 
-    <header>
-        <img src="assets/logo.svg" alt="Logotipo Ecoleta">
-        <div id="fundo-back-home">
-        <a id="back-home" href="index.html">
-          <span></span> Voltar para a Home</a>
-        </div>
-    </header>
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="styles/search-results.css">
+{% endblock styles %}
 
-  <main>
-    <h4>
-        <strong>2 pontos</strong> foram encontrados
-    </h4>
+{% block content %}
 
-    <div class="cards">
-        <div class="card">
+      {% include "partials/page-header.html" %}
+
+      <main>
+        <h4>
+          <strong>2 pontos</strong>
+          foram encontrados
+        </h4>
+
+        <div class="cards">
+          <div class="card">
             <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="Colectoria">
             <h1>Colectoria</h2>
             <h3>Resíduos Eletrônicos, Lâmpadas</h3>
             <p>
-                Rio do Sul, Santa Catarina<br/>
-                Guilherme Gemballa, Jardim América<br/>
-                N° 260
-            </p>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Papersider">
-          <h1>Papersider</h1>
-          <h3>Papéis e Papelão</h3>
-          <p>
               Rio do Sul, Santa Catarina<br/>
               Guilherme Gemballa, Jardim América<br/>
               N° 260
-          </p>
-      </div>
-    </div>
-  </main>
+            </p>
+          </div>
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1567393528677-d6adae7d4a0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Papersider">
+            <h1>Papersider</h1>
+            <h3>Papéis e Papelão</h3>
+            <p>
+              Rio do Sul, Santa Catarina<br/>
+              Guilherme Gemballa, Jardim América<br/>
+              N° 260
+            </p>
+          </div>
+        </div>
+      </main>
 
-  </div>
-</body>
-</html>
+{% endblock content %}
+
